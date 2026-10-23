@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 650 680" role="img" aria-label="Illustration of a repairable smartphone and circuits">
+<defs>
+ <linearGradient id="phone" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b4da7b"/><stop offset=".55" stop-color="#e8fcaa"/><stop offset="1" stop-color="#89b26a"/></linearGradient>
+ <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#1e4e3c"/><stop offset=".55" stop-color="#132e27"/><stop offset="1" stop-color="#061c17"/></linearGradient>
+ <linearGradient id="board" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#6c9175"/><stop offset="1" stop-color="#335b48"/></linearGradient>
+ <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%"><feDropShadow dx="8" dy="19" stdDeviation="19" flood-color="#000" flood-opacity=".38"/></filter>
+ <filter id="glow"><feGaussianBlur stdDeviation="7"/></filter>
+ <pattern id="dots" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.15" fill="#daf59a" opacity=".26"/></pattern>
+</defs>
+<!-- Floating round glow -->
+<circle cx="315" cy="338" r="263" fill="#42694f" opacity=".16"/>
+<circle cx="315" cy="338" r="232" stroke="#defea0" stroke-opacity=".19" stroke-width="1.3" fill="none" stroke-dasharray="7 13"/>
+<circle cx="315" cy="338" r="196" fill="url(#dots)"/>
+<!-- tiny shards -->
+<g fill="#e0fd86" opacity=".84"><path d="M85 130l8 25 26 7-26 8-8 25-8-25-26-8 26-7z"/><path d="M524 517l5 17 17 5-17 5-5 17-5-17-17-5 17-5z"/><circle cx="560" cy="201" r="5"/><circle cx="134" cy="476" r="4"/></g>
+<!-- Back board rotated -->
+<g transform="translate(338 310) rotate(21) translate(-338 -310)" filter="url(#shadow)">
+<rect x="191" y="93" width="304" height="456" rx="32" fill="#0e241c" stroke="#78a885" stroke-width="7"/>
+<rect x="207" y="109" width="271" height="422" rx="20" fill="url(#board)"/>
+<g fill="none" stroke="#b7e999" stroke-width="4" stroke-linecap="round" opacity=".69">
+<path d="M222 157h70v65h55v95h77"/><path d="M449 153h-88v60h-38v67h-65"/><path d="M234 471h89v-65h109"/><path d="M466 382h-78v75h-58v56"/><path d="M240 351h70v-68h60"/><path d="M453 263h-50v60h-73"/>
+</g>
+<g fill="#e8fea4"><circle cx="222" cy="157" r="7"/><circle cx="424" cy="317" r="7"/><circle cx="449" cy="153" r="6"/><circle cx="258" cy="280" r="7"/><circle cx="431" cy="406" r="7"/><circle cx="330" cy="513" r="6"/></g>
+<rect x="273" y="259" width="137" height="115" rx="11" fill="#193e2e" stroke="#dafa9b" stroke-width="7"/><rect x="300" y="286" width="82" height="61" rx="7" fill="#97c478"/><text x="341" y="322" text-anchor="middle" fill="#193e2e" font-family="Arial,sans-serif" font-weight="bold" font-size="26">↻</text>
+</g>
+<!-- Main glass phone -->
+<g transform="translate(284 354) rotate(-17) translate(-284 -354)" filter="url(#shadow)">
+<rect x="129" y="93" width="307" height="528" rx="48" fill="#061a13" stroke="#395f44" stroke-width="5"/>
+<rect x="141" y="105" width="283" height="503" rx="39" fill="url(#phone)"/>
+<rect x="153" y="117" width="259" height="477" rx="31" fill="url(#glass)"/>
+<path d="M170 477c55-39 98-7 158-100s51-132 67-156v356H170z" fill="#306a4e" opacity=".3"/>
+<g fill="none" stroke="#b9f381" opacity=".6"><circle cx="282" cy="347" r="95" stroke-width="2"/><circle cx="282" cy="347" r="120" stroke-width="1.5" stroke-dasharray="4 9"/><circle cx="282" cy="347" r="70" stroke-width="2"/></g>
+<path d="M322 305a57 57 0 0 0-92 26" fill="none" stroke="#e4ffa4" stroke-width="16" stroke-linecap="round"/><path d="M222 308l4 33 32-8" stroke="#e4ffa4" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<path d="M239 389a57 57 0 0 0 92-26" fill="none" stroke="#e4ffa4" stroke-width="16" stroke-linecap="round"/><path d="M339 389l-4-33-32 8" stroke="#e4ffa4" stroke-width="13" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+<rect x="234" y="132" width="104" height="20" rx="10" fill="#081b14"/>
+<circle cx="323" cy="142" r="4" fill="#789a82"/>
+<text x="282" y="188" font-family="Arial,sans-serif" font-size="12" letter-spacing="4" font-weight="bold" text-anchor="middle" fill="#c9eea6">SECOND LIFE</text>
+<path d="M209 521h148" stroke="#a3cda3" stroke-width="2" stroke-linecap="round" opacity=".45"/><path d="M233 538h100" stroke="#a3cda3" stroke-width="2" stroke-linecap="round" opacity=".45"/>
+<rect x="253" y="579" width="57" height="4" rx="2" fill="#bfe5a2" opacity=".7"/>
+</g>
+<!-- Side modules -->
+<g transform="translate(470 417) rotate(18)" filter="url(#shadow)"><rect width="101" height="103" rx="14" fill="#def89c"/><rect x="13" y="12" width="75" height="79" rx="7" fill="#31513b"/><path d="M26 30h47M26 43h47M26 56h30" stroke="#bde580" stroke-width="3"/><circle cx="68" cy="70" r="11" fill="#d5f598"/><circle cx="68" cy="70" r="5" fill="#36533d"/></g>
+<g transform="translate(112 531) rotate(-23)" filter="url(#shadow)"><rect width="112" height="59" rx="13" fill="#d5ed9b"/><path d="M22 27h68M22 37h49" stroke="#476747" stroke-width="5" stroke-linecap="round"/><circle cx="87" cy="43" r="5" fill="#476747"/></g>
+</svg>
