@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#103e53">
+  <meta name="theme-color" content="#14261f">
   <meta name="description" content="RE:BOOT — an interactive student photo story about electronic waste, second chances and UN Sustainable Development Goal 12.">
   <meta property="og:title" content="RE:BOOT — Give Tech a Second Life">
   <meta property="og:description" content="Discover our student photo story, explore sustainable choices and test your knowledge.">
@@ -31,7 +31,7 @@
       <nav class="nav-links" id="primary-nav" aria-label="Primary navigation">
         <a href="#mission">Our mission</a>
         <a href="#gallery">Photo stories</a>
-        <a href="#arcade">Games & quizzes</a>
+        <a href="#interact">Get involved</a>
         <a href="#creators">The creators</a>
         <a href="#interact" class="nav-cta">Take the challenge <span aria-hidden="true">↗</span></a>
       </nav>
@@ -141,9 +141,9 @@
           <article class="quiz-card" aria-labelledby="quiz-title">
             <div class="interactive-header"><span class="capsule capsule-green"><span aria-hidden="true">✳</span> INTERACTIVE / 01</span><span class="card-corner" aria-hidden="true">↗</span></div>
             <h3 id="quiz-title">The smart<br>choices quiz<span class="acid-dot">.</span></h3>
-            <p>Six quick questions about the way we use our technology.</p>
+            <p>Four quick questions about the way we use our technology.</p>
             <div class="quiz-box" id="quiz-box">
-              <div class="quiz-topline"><span id="quiz-position">QUESTION 01 / 06</span><span id="quiz-score">SCORE 0</span></div>
+              <div class="quiz-topline"><span id="quiz-position">QUESTION 01 / 04</span><span id="quiz-score">SCORE 0</span></div>
               <div class="quiz-progress" aria-label="Quiz progress"><div id="quiz-progress-bar"></div></div>
               <h4 id="quiz-question">Loading the first question…</h4>
               <div id="quiz-options" class="quiz-options"></div>
@@ -169,69 +169,6 @@
             <div class="pledge-footer"><span id="pledge-message" aria-live="polite">Choose your first action.</span><button id="pledge-reset" class="text-reset" type="button">Reset ↺</button></div>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- INTERACTIVE ARCADE: three independent games. Edit questions in script.js. -->
-    <section class="section arcade-section" id="arcade" aria-labelledby="arcade-title">
-      <div class="shell">
-        <div class="section-kicker"><span class="section-index">03B /</span> PLAY TO LEARN <span class="kicker-line"></span> SDG 12 ARCADE</div>
-        <div class="arcade-heading">
-          <div>
-            <p class="arcade-overline"><span class="arcade-online-dot"></span> THREE CHALLENGES / ZERO DOWNLOADS</p>
-            <h2 id="arcade-title" class="display-heading">PRESS PLAY.<br><span class="italic-word">THINK GREEN.</span></h2>
-          </div>
-          <p class="section-lead">Can you sort your waste, find the matching pairs and separate myths from facts? Test yourself and learn how to give tech a second life.</p>
-        </div>
-        <div class="arcade-grid">
-          <article class="game-panel game-panel-sort" aria-labelledby="sort-title">
-            <div class="game-head"><span class="game-number">GAME 01 / SORT IT</span><span class="game-icon" aria-hidden="true">♻</span></div>
-            <h3 id="sort-title">Where does<br>it belong<span class="acid-dot">?</span></h3>
-            <p class="game-description">Choose the right destination for each everyday item.</p>
-            <div class="game-topbar"><span id="sort-step">ITEM 1 / 8</span><span id="sort-score">0 POINTS</span></div>
-            <div class="game-meter"><span id="sort-meter"></span></div>
-            <div class="sort-item" id="sort-item" aria-live="polite">
-              <span class="sort-emoji" id="sort-emoji" aria-hidden="true">📱</span>
-              <div><small>YOUR ITEM</small><strong id="sort-name">Loading…</strong></div>
-            </div>
-            <div class="sort-choices" id="sort-choices" role="group" aria-label="Choose a waste destination">
-              <button type="button" data-sort="ewaste"><span aria-hidden="true">⚡</span> E-waste</button>
-              <button type="button" data-sort="batteries"><span aria-hidden="true">🔋</span> Batteries</button>
-              <button type="button" data-sort="recycling"><span aria-hidden="true">📦</span> Recycling</button>
-              <button type="button" data-sort="reuse"><span aria-hidden="true">🔄</span> Reuse</button>
-            </div>
-            <div class="game-feedback" id="sort-feedback" aria-live="polite"></div>
-            <button type="button" class="game-primary" id="sort-next" hidden>Next item <span aria-hidden="true">→</span></button>
-            <div class="game-finish" id="sort-finish" hidden aria-live="polite"></div>
-          </article>
-
-          <article class="game-panel game-panel-memory" aria-labelledby="memory-title">
-            <div class="game-head"><span class="game-number">GAME 02 / MATCH IT</span><span class="game-icon" aria-hidden="true">◈</span></div>
-            <h3 id="memory-title">The second-<br>life memory<span class="acid-dot">.</span></h3>
-            <p class="game-description">Reveal cards and match sustainable tech habits.</p>
-            <div class="game-topbar"><span id="memory-pairs">0 / 6 PAIRS</span><span id="memory-moves">0 MOVES</span></div>
-            <div class="memory-board" id="memory-board" aria-label="Memory game: 12 face-down cards"></div>
-            <p class="memory-message" id="memory-message" aria-live="polite">Tap any two cards to find a match.</p>
-            <div class="memory-footer"><span class="memory-tip">TIP: remember card positions</span><button type="button" id="memory-restart" class="game-reset">Shuffle again ↻</button></div>
-          </article>
-
-          <article class="game-panel game-panel-myth" aria-labelledby="myth-title">
-            <div class="game-head"><span class="game-number">GAME 03 / TRUE OR FALSE</span><span class="game-icon" aria-hidden="true">✦</span></div>
-            <h3 id="myth-title">Myth<br>or fact<span class="acid-dot">?</span></h3>
-            <p class="game-description">Six statements about sustainability. Can you spot the truth?</p>
-            <div class="game-topbar"><span id="myth-step">STATEMENT 1 / 6</span><span id="myth-score">0 POINTS</span></div>
-            <div class="game-meter"><span id="myth-meter"></span></div>
-            <div class="myth-statement" id="myth-statement">Loading statement…</div>
-            <div class="myth-actions" id="myth-actions" role="group" aria-label="Answer true or false">
-              <button type="button" data-myth="true"><span aria-hidden="true">✓</span> FACT</button>
-              <button type="button" data-myth="false"><span aria-hidden="true">×</span> MYTH</button>
-            </div>
-            <div class="game-feedback" id="myth-feedback" aria-live="polite"></div>
-            <button type="button" class="game-primary" id="myth-next" hidden>Next statement <span aria-hidden="true">→</span></button>
-            <div class="game-finish" id="myth-finish" hidden aria-live="polite"></div>
-          </article>
-        </div>
-        <p class="arcade-note">✳ All three challenges work offline after the page loads. Scores are for fun and are not sent to a server.</p>
       </div>
     </section>
 
@@ -287,7 +224,7 @@
     </section>
   </main>
 
-  <footer class="site-footer"><div class="shell footer-layout"><div><a href="#home" class="footer-brand">RE:BOOT<span>.</span></a><p>A student-made SDG 12 story · COIL project 2026</p></div><div class="footer-links"><a href="#mission">Mission</a><a href="#gallery">Gallery</a><a href="#interact">Challenge</a><a href="#arcade">Games</a><a href="#creators">Team</a></div><div class="footer-sources"><strong>SOURCES & FURTHER READING</strong><a href="https://sdgs.un.org/goals/goal12" target="_blank" rel="noopener noreferrer">United Nations · SDG 12 ↗</a><a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-Waste-Monitor-2024.aspx" target="_blank" rel="noopener noreferrer">ITU · Global E-waste Monitor 2024 ↗</a></div></div><div class="shell footer-bottom"><span>© 2026 RE:BOOT / EDUCATIONAL PROJECT</span><a href="#top">BACK TO TOP ↑</a></div></footer>
+  <footer class="site-footer"><div class="shell footer-layout"><div><a href="#home" class="footer-brand">RE:BOOT<span>.</span></a><p>A student-made SDG 12 story · COIL project 2026</p></div><div class="footer-links"><a href="#mission">Mission</a><a href="#gallery">Gallery</a><a href="#interact">Challenge</a><a href="#creators">Team</a></div><div class="footer-sources"><strong>SOURCES & FURTHER READING</strong><a href="https://sdgs.un.org/goals/goal12" target="_blank" rel="noopener noreferrer">United Nations · SDG 12 ↗</a><a href="https://www.itu.int/en/ITU-D/Environment/Pages/Publications/The-Global-E-Waste-Monitor-2024.aspx" target="_blank" rel="noopener noreferrer">ITU · Global E-waste Monitor 2024 ↗</a></div></div><div class="shell footer-bottom"><span>© 2026 RE:BOOT / EDUCATIONAL PROJECT</span><a href="#top">BACK TO TOP ↑</a></div></footer>
 
   <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Expanded photograph" aria-hidden="true" hidden>
     <div class="lightbox-backdrop" data-close-lightbox></div>
