@@ -140,14 +140,14 @@ function renderGallery(){
     frame.append(img);
     if (p.demo){const demo=document.createElement('span');demo.className='photo-demo';demo.textContent='DEMO · REPLACE';frame.append(demo);}
     const expand=document.createElement('span');expand.className='photo-expand';expand.textContent='↗';expand.setAttribute('aria-hidden','true');frame.append(expand);
-    const info=document.createElement('div');info.className='photo-info';const meta=document.createElement('span');meta.textContent=`${String(p.id).padStart(2,'0')} / STUDENT ${p.author.toUpperCase()} / ${p.category}`;
+    const info=document.createElement('div');info.className='photo-info';const meta=document.createElement('span');meta.textContent=`${String(p.id).padStart(2,'0')} / ${p.author === 'a' ? 'LUKA' : 'MARK'} / ${p.category}`;
     const title=document.createElement('h3');title.textContent=p.title;const desc=document.createElement('p');desc.textContent=p.description;info.append(meta,title,desc);
     btn.append(frame,info);btn.addEventListener('click',()=>openLightbox(index,btn));card.append(btn);root.append(card);
   });
 }
 function showLightbox(){const p=visiblePhotos[lightboxIndex];if (!p) return;
   $('#lightboxImg').src=p.src;$('#lightboxImg').alt=p.demo?`Sample illustration: ${p.title}`:p.description;
-  $('#lightboxTag').textContent=`IMAGE ${String(p.id).padStart(2,'0')} / STUDENT ${p.author.toUpperCase()} ${p.demo?'/ DEMO PLACEHOLDER':''}`;
+  $('#lightboxTag').textContent=`IMAGE ${String(p.id).padStart(2,'0')} / ${p.author === 'a' ? 'Student Luka' : 'Student Mark'} ${p.demo?'/ DEMO PLACEHOLDER':''}`;
   $('#lightboxTitle').textContent=p.title;$('#lightboxDescription').textContent=p.description;
 }
 function openLightbox(index,trigger){beforeModal=trigger;lightboxIndex=index;showLightbox();$('#lightbox').hidden=false;document.body.classList.add('lightbox-open');$('#lightboxClose').focus();}
