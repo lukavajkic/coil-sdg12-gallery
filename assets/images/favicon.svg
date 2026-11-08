@@ -1,1 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="16" fill="#143645"/><path d="M46 26A16 16 0 1 0 47 39" fill="none" stroke="#8bf2dd" stroke-width="7" stroke-linecap="round"/><path d="M44 11v18H27" fill="none" stroke="#8bf2dd" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="RE:BOOT logo">
+  <rect width="96" height="96" rx="21" fill="#092d44"/>
+  <text x="10" y="48" fill="#ffffff" font-family="Arial,Helvetica,sans-serif" font-size="45" font-weight="900" letter-spacing="-3">RE</text>
+  <circle cx="76" cy="29" r="4.4" fill="#9ff4d9"/>
+  <circle cx="76" cy="44" r="4.4" fill="#9ff4d9"/>
+  <text x="10" y="78" fill="#9ff4d9" font-family="Arial,Helvetica,sans-serif" font-size="26" font-weight="900" letter-spacing="-1.2">BOOT</text>
+</svg>
