@@ -336,3 +336,52 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
     max-width:calc(100% - 16px);
   }
 }
+
+/* Our City: text-only information cards, no photo placeholders. */
+.local-card-text{
+  display:flex;
+  height:100%;
+  min-height:235px;
+  border-top:4px solid var(--blue);
+  background:#fffefa;
+}
+.local-card-text:nth-child(2){border-top-color:#2b918a}
+.local-card-text:nth-child(3){border-top-color:#ef906e}
+.local-card-text .local-card-body{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  padding:24px;
+  width:100%;
+}
+.local-card-number{
+  display:block;
+  color:var(--blue);
+  font:800 10px/1.4 'DM Sans',Arial,sans-serif;
+  letter-spacing:1.1px;
+  margin-bottom:20px;
+}
+.local-card-category{
+  display:block;
+  color:#356f79;
+  font:800 10px/1.4 'DM Sans',Arial,sans-serif;
+  letter-spacing:1.2px;
+  margin-bottom:8px;
+}
+.local-card-text h3{
+  font:700 clamp(19px,2vw,24px)/1.23 'Syne','Space Grotesk',sans-serif;
+  letter-spacing:-.4px;
+  margin:0 0 12px;
+  color:#172d3d;
+}
+.local-card-text p{
+  color:#526e78;
+  font-size:13px;
+  line-height:1.7;
+  margin:0;
+}
+@media(max-width:580px){
+  .local-card-text{min-height:0}
+  .local-card-text .local-card-body{padding:20px}
+  .local-card-number{margin-bottom:14px}
+}
