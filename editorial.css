@@ -277,3 +277,46 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 @media(prefers-reduced-motion:reduce){
   .hero-art>img{animation:none}
 }
+/* Illustrated Nova Gorica reuse corner: replaces the old orange slogan tile. */
+.reuse-figure{
+  position:relative;
+  margin:0;
+  display:block;
+  min-width:0;
+  min-height:295px;
+  background:#e1f3e6;
+  border-left:1px solid rgba(255,255,255,.45);
+  overflow:hidden;
+}
+.reuse-figure img{
+  display:block;
+  width:100%;
+  height:100%;
+  min-height:295px;
+  object-fit:cover;
+  object-position:center;
+}
+.reuse-figure figcaption{
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  z-index:1;
+  width:max-content;
+  max-width:calc(100% - 24px);
+  background:rgba(16,41,57,.92);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.35);
+  padding:8px 10px;
+  border-radius:4px;
+  text-align:right;
+  font:600 10px/1.45 'DM Sans',Arial,sans-serif;
+  letter-spacing:0;
+  overflow-wrap:break-word;
+}
+@media(max-width:1020px){
+  .reuse-figure{aspect-ratio:4/3;min-height:0;border-left:0;border-top:1px solid rgba(255,255,255,.45)}
+  .reuse-figure img{min-height:0;height:100%;object-fit:cover}
+}
+@media(max-width:580px){
+  .reuse-figure figcaption{font-size:9px;bottom:9px;right:9px;max-width:calc(100% - 18px)}
+}
