@@ -7,7 +7,7 @@
   Category: collection | reuse | story; author: a | b.
 */
 const galleryPhotos = [
-  {id:1,author:'a',category:'collection',src:'assets/images/bin-nova-gorica.avif',title:'E-waste bin in Nova Gorica',description:'Our photograph of a street collection container for small electrical and electronic waste, with separate blue battery compartments in Nova Gorica.',demo:false},
+  {id:1,author:'a',category:'collection',src:'assets/images/bin-nova-gorica.avif?v=quality-20261112',title:'E-waste bin in Nova Gorica',description:'Our photograph of a street collection container for small electrical and electronic waste, with separate blue battery compartments in Nova Gorica.',demo:false},
   {id:2,author:'a',category:'collection',src:'assets/images/demo-02.svg',title:'The battery compartment',description:'Show the dedicated battery compartment and its label — not just a generic bin.',demo:true},
   {id:3,author:'a',category:'reuse',src:'assets/images/demo-04.svg',title:'CERO and the reuse corner',description:'Document the official collection centre or the reuse corner, if access is permitted.',demo:true},
   {id:4,author:'b',category:'reuse',src:'assets/images/demo-07.svg',title:'A second life for technology',description:'An example of a usable device being passed on instead of discarded.',demo:true},
