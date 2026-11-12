@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="t d">
+<title id="t">Illustration of components inside an old desktop computer</title>
+<desc id="d">An opened desktop PC case with motherboard, cooling fan, memory modules, graphics card, wiring and power supply, intended as a demo placeholder for an original photo.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#a9d9d9"/><stop offset="1" stop-color="#d3efdf"/></linearGradient>
+  <linearGradient id="case" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#415e70"/><stop offset=".5" stop-color="#193b50"/><stop offset="1" stop-color="#11283b"/></linearGradient>
+  <linearGradient id="metal" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b4cbd0"/><stop offset="1" stop-color="#668997"/></linearGradient>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" fill="none" stroke="#407d7e" stroke-opacity=".12"/></pattern>
+  <filter id="shadow" x="-25%" y="-25%" width="150%" height="150%"><feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#164155" flood-opacity=".35"/></filter>
+</defs>
+<rect width="1200" height="800" fill="url(#bg)"/>
+<rect width="1200" height="800" fill="url(#grid)"/>
+<circle cx="1110" cy="80" r="240" fill="#ffffff" opacity=".17"/>
+<circle cx="95" cy="735" r="230" fill="#17786b" opacity=".09"/>
+<!-- opened desktop computer enclosure -->
+<g filter="url(#shadow)">
+ <rect x="136" y="89" width="930" height="631" rx="38" fill="#17364a" stroke="#416a78" stroke-width="22"/>
+ <rect x="166" y="117" width="871" height="576" rx="22" fill="url(#case)" stroke="#6a94a0" stroke-width="5"/>
+ <rect x="192" y="143" width="818" height="523" rx="10" fill="#163a48"/>
+ <rect x="207" y="158" width="585" height="493" rx="13" fill="#24645b" stroke="#0d2f3b" stroke-width="11"/>
+ <!-- motherboard circuits -->
+ <g fill="none" stroke="#67d3b3" stroke-width="4" opacity=".42" stroke-linejoin="round">
+  <path d="M228 255h94v85h77m-176 158h110v-61h66m60 181v-95h86v-62m111 168v-76h69"/>
+  <path d="M257 195h172v67h94m112-42h118v105h-55m-456 268h190v-40h76m111-345v83h103"/>
+  <path d="M350 159v116m-91 190h147m290 149V458h70m-455 98v45"/>
+ </g>
+ <!-- processor cooler -->
+ <rect x="270" y="216" width="302" height="294" rx="20" fill="#0e3944" stroke="#80c6ad" stroke-width="12"/>
+ <rect x="300" y="246" width="242" height="234" rx="18" fill="#1f4d59" stroke="#95b9b7" stroke-width="9"/>
+ <circle cx="421" cy="361" r="104" fill="#0f293c" stroke="#a6c0bc" stroke-width="14"/>
+ <g fill="#76979e" stroke="#bfd9d3" stroke-width="4">
+  <path d="M421 354 C386 332 370 299 395 285 C423 267 442 324 421 354Z"/>
+  <path d="M428 360 C460 328 498 327 503 355 C508 389 452 395 428 360Z"/>
+  <path d="M421 369 C450 398 455 445 425 447 C394 447 396 393 421 369Z"/>
+  <path d="M412 360 C382 391 336 392 337 359 C340 332 382 335 412 360Z"/>
+ </g>
+ <circle cx="421" cy="361" r="35" fill="#102d41" stroke="#c8e0d7" stroke-width="10"/>
+ <circle cx="421" cy="361" r="13" fill="#72d8b5"/>
+ <!-- memory modules -->
+ <g transform="translate(600 200) rotate(3)">
+  <rect width="38" height="298" rx="6" fill="#122d3d" stroke="#8ac3b7" stroke-width="5"/>
+  <rect x="7" y="25" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="7" y="91" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="7" y="157" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="7" y="223" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="48" width="38" height="298" rx="6" fill="#122d3d" stroke="#8ac3b7" stroke-width="5"/>
+  <rect x="55" y="25" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="55" y="91" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="55" y="157" width="24" height="45" rx="3" fill="#93d7bc"/>
+  <rect x="55" y="223" width="24" height="45" rx="3" fill="#93d7bc"/>
+ </g>
+ <!-- graphics card -->
+ <rect x="237" y="540" width="520" height="72" rx="11" fill="#0f293a" stroke="#c2d0c9" stroke-width="8"/>
+ <path d="M272 556h453v39H272z" fill="#1c5660"/>
+ <circle cx="363" cy="575" r="23" fill="#0c2b3e" stroke="#94b5b4" stroke-width="6"/>
+ <circle cx="363" cy="575" r="7" fill="#a8e8c4"/>
+ <circle cx="603" cy="575" r="23" fill="#0c2b3e" stroke="#94b5b4" stroke-width="6"/>
+ <circle cx="603" cy="575" r="7" fill="#a8e8c4"/>
+ <g stroke="#89c5ae" stroke-width="4"><path d="M455 566h78m-78 13h98m-98 13h78"/></g>
+ <!-- power supply -->
+ <rect x="822" y="454" width="180" height="175" rx="17" fill="url(#metal)" stroke="#bdd4d2" stroke-width="6"/>
+ <rect x="842" y="473" width="138" height="134" rx="12" fill="#293d4a"/>
+ <circle cx="911" cy="540" r="57" fill="none" stroke="#9db9ba" stroke-width="7"/>
+ <circle cx="911" cy="540" r="38" fill="none" stroke="#9db9ba" stroke-width="6"/>
+ <circle cx="911" cy="540" r="18" fill="#789b99"/>
+ <path d="M854 540h114M911 483v114" stroke="#a3bcb8" stroke-width="6"/>
+ <!-- drive -->
+ <rect x="829" y="185" width="170" height="106" rx="10" fill="#8faeb1" stroke="#c5d7d3" stroke-width="8"/>
+ <rect x="841" y="206" width="146" height="57" rx="6" fill="#d6e3dd"/>
+ <rect x="857" y="221" width="88" height="7" rx="3" fill="#4a6c79"/>
+ <rect x="857" y="237" width="118" height="7" rx="3" fill="#86a5ab"/>
+ <!-- cable bundle -->
+ <path d="M811 333 C741 341 805 438 830 495" fill="none" stroke="#efb96e" stroke-width="14" stroke-linecap="round"/>
+ <path d="M817 334 C775 341 810 425 842 483" fill="none" stroke="#e39b79" stroke-width="8" stroke-linecap="round"/>
+ <path d="M817 340 C785 368 849 417 867 458" fill="none" stroke="#94c5b5" stroke-width="7" stroke-linecap="round"/>
+ <!-- case bolts -->
+ <g fill="#dbe9df"><circle cx="185" cy="136" r="7"/><circle cx="1021" cy="136" r="7"/><circle cx="185" cy="677" r="7"/><circle cx="1021" cy="677" r="7"/></g>
+</g>
+<!-- readable editorial caption -->
+<g>
+ <rect x="136" y="30" width="370" height="47" rx="5" fill="#10384b"/>
+ <text x="161" y="62" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#eef9f0" letter-spacing="2">INSIDE AN OLD COMPUTER</text>
+</g>
+</svg>
