@@ -57,7 +57,20 @@
   <rect x="775" y="532" width="108" height="130" rx="12"/>
   <rect x="893" y="532" width="79" height="130" rx="12"/>
  </g>
- <g transform="translate(-9 -3) scale(.83)"><g transform="translate(796 410)" stroke="#d8fff1" stroke-width="10" fill="none" stroke-linecap="round"><path d="M 16 74 V 46 a45 45 0 0 1 90 0 v28"/><rect x="5" y="61" width="25" height="46" rx="10" fill="#d8fff1" stroke="none"/><rect x="92" y="61" width="25" height="46" rx="10" fill="#d8fff1" stroke="none"/></g><g transform="translate(916 415)" fill="#d8fff1"><path d="M 30 21 H 84 q16 0 20 17 l18 48 q4 18 -9 23 -10 3 -19 -9 L 81 87 H 33 L 19 99 Q 6 113 -5 105 q-9 -7 -5 -19 L 8 38 Q 13 21 30 21Z"/><path d="M 32 48 v23 M 21 59 h23" stroke="#1e7779" stroke-width="7" stroke-linecap="round"/><circle cx="84" cy="50" r="6" fill="#1e7779"/><circle cx="99" cy="64" r="6" fill="#1e7779"/></g><g transform="translate(794 556)" stroke="#d8fff1" fill="none" stroke-width="9" stroke-linejoin="round"><rect x="6" y="30" width="108" height="68" rx="9"/><path d="M 34 30 l10 -20 h30 l10 20"/><circle cx="60" cy="64" r="22"/></g><g transform="translate(915 557)" stroke="#d8fff1" fill="none" stroke-width="9" stroke-linejoin="round"><rect x="12" y="6" width="104" height="105" rx="10"/><rect x="5" y="40" width="117" height="59" rx="8" fill="#eaffee" stroke="none"/><path d="M 34 65 H 93 M 34 80 H 93" stroke="#1e7779" stroke-width="7"/></g></g>
+ <g stroke="#eafff2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none">
+  <path d="M 797 474 V 460 A 35 35 0 0 1 867 460 V 474"/>
+  <rect x="788" y="468" width="19" height="31" rx="7" fill="#eafff2" stroke="none"/>
+  <rect x="860" y="468" width="19" height="31" rx="7" fill="#eafff2" stroke="none"/>
+  <path d="M 913 451 Q 919 437 935 441 H 940 Q 954 436 961 452 L 967 478 Q 971 493 960 495 L 949 483 H 925 L 914 495 Q 903 494 907 477 Z" fill="#eafff2" stroke="none"/>
+  <path d="M 918 462 H 931 M 924.5 455 V 469" stroke="#1b777e" stroke-width="5"/>
+  <circle cx="951" cy="457" r="4" fill="#1b777e" stroke="none"/>
+  <circle cx="958" cy="465" r="4" fill="#1b777e" stroke="none"/>
+  <rect x="793" y="577" width="74" height="58" rx="10"/>
+  <path d="M 813 577 l9 -12 h20 l9 12"/>
+  <circle cx="830" cy="606" r="16"/>
+  <rect x="905" y="582" width="60" height="50" rx="6"/>
+  <path d="M 917 582 V 568 H 954 V 582 M 916 606 H 954 M 919 621 H 952"/>
+ </g>
  <rect x="104" y="714" width="910" height="15" rx="3" fill="#164b59"/>
  <rect x="136" y="728" width="36" height="17" fill="#114957"/><rect x="946" y="728" width="36" height="17" fill="#114957"/>
 </g>
