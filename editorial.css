@@ -96,8 +96,11 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 .timeline-years .year-btn{min-width:0;min-height:55px;padding:9px 10px;display:flex;justify-content:center;align-items:center;flex-direction:column;gap:1px;border:0;border-bottom:1px solid #d0dcce;color:#3a5e6c;font-size:16px;background:none}
 .timeline-years .year-btn.active{background:var(--blue);color:#fff}
 .timeline-years .year-btn.active small{color:#fff}
-.timeline-detail{display:grid;grid-template-columns:minmax(0,180px) minmax(0,1fr);gap:26px;min-height:370px;padding:32px;background:#fffefa;align-items:center}
-.detail-year{font:800 clamp(55px,5vw,83px)/1 'Syne',sans-serif;letter-spacing:-.05em;color:var(--blue)}
+.timeline-detail{display:grid;grid-template-columns:minmax(0,1fr);gap:16px;min-height:0;padding:30px 32px;background:#fffefa;align-items:start}
+.detail-year{font:800 clamp(37px,4.2vw,55px)/1.05 'Syne',sans-serif;letter-spacing:-.03em;color:var(--blue);margin:0;white-space:nowrap;max-width:100%}
+.timeline-detail>div:first-child{display:flex;align-items:center;gap:16px;flex-wrap:wrap;border-bottom:1px solid #d7dfd7;padding-bottom:15px}
+.timeline-detail>div:last-child{min-width:0}
+.detail-era{margin:0;white-space:nowrap;letter-spacing:1.6px}
 .timeline-detail h3{font:700 clamp(22px,2.7vw,32px)/1.18 'Syne',sans-serif;letter-spacing:-.025em}
 .timeline-detail p{color:#4c6670}
 .tiny-note{color:#5c727a}
@@ -206,7 +209,7 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
   .timeline-shell{grid-template-columns:1fr}
   .timeline-years{flex-direction:row;max-height:none;overflow-x:auto;overflow-y:hidden;border-right:0;border-bottom:1px solid #172c42}
   .timeline-years .year-btn{min-width:90px;flex-shrink:0}
-  .timeline-detail{grid-template-columns:minmax(0,160px) minmax(0,1fr);min-height:250px}
+  .timeline-detail{grid-template-columns:minmax(0,1fr);min-height:0}
   .local-banner{grid-template-columns:1fr}
   .local-banner-graphic{display:none}
   .lab-panel{grid-template-columns:minmax(0,1fr)}
@@ -245,7 +248,7 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
   .headline{font-size:clamp(31px,8.2vw,46px);letter-spacing:-.045em}
   .intro .headline{font-size:clamp(36px,8.9vw,51px)}
   .timeline-detail{grid-template-columns:minmax(0,1fr);padding:22px;gap:14px;min-height:0}
-  .detail-year{font-size:61px}
+  .detail-year{font-size:clamp(35px,9vw,43px)}
   .data-toolbar{padding:16px}
   .data-explainer{padding:24px 19px}
   .data-number{font-size:49px}
