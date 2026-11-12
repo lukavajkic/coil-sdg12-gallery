@@ -103,24 +103,23 @@ $('#dataNext').addEventListener('click',()=>{selectedPoint=Math.min(7,selectedPo
 renderDataset();
 
 // Local story highlights reuse gallery images rather than introducing extra photo obligations.
+// Three factual Nova Gorica information cards, with no required photo slots.
 const featured = [
-  {photoId:1,number:'01 / THE STREET',tag:'STREET-LEVEL EVIDENCE',title:'What does this bin accept?',body:'Photograph a real local collection point. Compare the label with the rules — small batteries and electrical devices do not always use the same compartment.'},
-  {photoId:3,number:'02 / COLLECTION CENTRE',tag:'LOCAL INFRASTRUCTURE',title:'Where larger devices belong.',body:'Collection centres handle categories that do not fit street containers. Confirm current opening hours and photo permission before visiting.'},
-  {photoId:4,number:'03 / REUSE',tag:'BEFORE RECYCLING',title:'Could someone else use it?',body:'Working equipment has a possible second life. Our local reuse corner is a concrete example of prevention before recycling.'}
+  {number:'01 / THE STREET',tag:'STREET-LEVEL EVIDENCE',title:'What does this bin accept?',body:'Street collection points can have different compartments. Check the container label: batteries and small electrical devices do not always belong in the same opening.'},
+  {number:'02 / COLLECTION CENTRE',tag:'LOCAL INFRASTRUCTURE',title:'Where larger devices belong.',body:'Collection centres handle appliances and other items that do not belong in street containers. Check the local operator’s instructions and opening hours before visiting.'},
+  {number:'03 / REUSE',tag:'BEFORE RECYCLING',title:'Could someone else use it?',body:'Working equipment can have a second life. The reuse corner in Nova Gorica is a local example of preventing waste before recycling.'}
 ];
 function renderLocalCards(){
   const root=$('#localCards');root.textContent='';
   featured.forEach(item=>{
-    const p=galleryPhotos.find(x=>x.id===item.photoId);
-    const article=document.createElement('article');article.className='local-card';
-    const visual=document.createElement('div');visual.className='local-visual';
-    const img=document.createElement('img');img.src=p.src;img.alt=p.demo?'Sample illustration; replace with a local photograph':p.description;img.loading='lazy';
-    const label=document.createElement('span');label.className='local-slot';label.textContent=p.demo?`PHOTO SLOT ${String(item.photoId).padStart(2,'0')} · DEMO`:'ORIGINAL STUDENT PHOTO';visual.append(img,label);
+    const article=document.createElement('article');
+    article.className='local-card local-card-text';
     const body=document.createElement('div');body.className='local-card-body';
-    const cat=document.createElement('span');cat.textContent=item.tag;
+    const number=document.createElement('span');number.className='local-card-number';number.textContent=item.number;
+    const cat=document.createElement('span');cat.className='local-card-category';cat.textContent=item.tag;
     const h=document.createElement('h3');h.textContent=item.title;
     const desc=document.createElement('p');desc.textContent=item.body;
-    body.append(cat,h,desc);article.append(visual,body);root.append(article);
+    body.append(number,cat,h,desc);article.append(body);root.append(article);
   });
 }
 renderLocalCards();
