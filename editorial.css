@@ -277,46 +277,62 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 @media(prefers-reduced-motion:reduce){
   .hero-art>img{animation:none}
 }
-/* Illustrated Nova Gorica reuse corner: replaces the old orange slogan tile. */
+/* Reuse illustration: high-resolution, responsive SVG asset (no thumbnail scaling). */
 .reuse-figure{
   position:relative;
-  margin:0;
-  display:block;
+  align-self:stretch;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   min-width:0;
-  min-height:295px;
-  background:#e1f3e6;
-  border-left:1px solid rgba(255,255,255,.45);
+  min-height:0;
+  margin:0;
+  background:#dfeee4;
+  border-left:1px solid rgba(255,255,255,.35);
   overflow:hidden;
 }
 .reuse-figure img{
   display:block;
   width:100%;
-  height:100%;
-  min-height:295px;
-  object-fit:cover;
+  height:auto;
+  min-height:0;
+  max-height:520px;
+  object-fit:contain;
   object-position:center;
+  image-rendering:auto;
 }
 .reuse-figure figcaption{
   position:absolute;
-  bottom:12px;
-  right:12px;
+  right:10px;
+  bottom:10px;
   z-index:1;
   width:max-content;
-  max-width:calc(100% - 24px);
-  background:rgba(16,41,57,.92);
+  max-width:calc(100% - 20px);
   color:#fff;
-  border:1px solid rgba(255,255,255,.35);
+  background:rgba(15,38,52,.9);
   padding:8px 10px;
   border-radius:4px;
   text-align:right;
-  font:600 10px/1.45 'DM Sans',Arial,sans-serif;
-  letter-spacing:0;
+  font:600 10px/1.4 'DM Sans',Arial,sans-serif;
   overflow-wrap:break-word;
 }
 @media(max-width:1020px){
-  .reuse-figure{aspect-ratio:4/3;min-height:0;border-left:0;border-top:1px solid rgba(255,255,255,.45)}
-  .reuse-figure img{min-height:0;height:100%;object-fit:cover}
+  .reuse-figure{
+    width:100%;
+    border-left:0;
+    border-top:1px solid rgba(255,255,255,.35);
+  }
+  .reuse-figure img{
+    width:100%;
+    max-height:520px;
+  }
 }
 @media(max-width:580px){
-  .reuse-figure figcaption{font-size:9px;bottom:9px;right:9px;max-width:calc(100% - 18px)}
+  .reuse-figure figcaption{
+    font-size:9px;
+    padding:6px 8px;
+    right:8px;
+    bottom:8px;
+    max-width:calc(100% - 16px);
+  }
 }
