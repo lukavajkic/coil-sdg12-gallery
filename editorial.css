@@ -291,3 +291,18 @@ a,button{transition:background-color .2s,color .2s,border-color .2s}
 @media(prefers-reduced-motion:reduce){
   .hero-art,.art-sticker,.art-year{transform:none!important}
 }
+
+/* Contrast and small-screen finishing passes */
+.stat-grid strong small{color:#1738ae}
+.timeline-years .year-btn.active small{color:#ffffff}
+.timeline-section .section-top:after{background:#f3f0e7}
+.data-section .section-top:after{background:#fffefa}
+.local-section .section-top:after{background:#ebf1e7}
+.gallery-section .section-top:after{background:#fffefa}
+@media(max-width:820px){
+  .nav{background:#faf8ef;border-bottom:2px solid #172c42;box-shadow:0 15px 25px rgba(20,44,55,.16)}
+}
+@media(max-width:580px){
+  .nav{top:70px;max-height:calc(100dvh - 70px);overflow-y:auto}
+  .hero-art>img{width:min(100%,330px)}
+}
