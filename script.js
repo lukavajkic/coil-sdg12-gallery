@@ -124,20 +124,19 @@ function renderLocalCards(){
 }
 renderLocalCards();
 
-// Six planned student photos: filtering, keyboard accessible lightbox.
+// Six completed gallery entries: filtering and keyboard-accessible lightbox.
 let category='all', author='all', visiblePhotos=[], lightboxIndex=0, beforeModal=null;
 function renderGallery(){
   visiblePhotos=galleryPhotos.filter(p=>(category==='all'||p.category===category)&&(author==='all'||p.author===author));
-  $('#galleryCount').textContent=`Showing ${visiblePhotos.length} of ${galleryPhotos.length} planned photographs`;
+  $('#galleryCount').textContent=`Showing ${visiblePhotos.length} of ${galleryPhotos.length} gallery items`;
   const root=$('#galleryGrid');root.textContent='';
   visiblePhotos.forEach((p,index)=>{
     const card=document.createElement('article');card.className='photo';
     const btn=document.createElement('button');btn.className='photo-button';btn.type='button';
     btn.setAttribute('aria-label',`View photo ${p.id}: ${p.title}`);
     const frame=document.createElement('div');frame.className='photo-img';
-    const img=document.createElement('img');img.src=p.src;img.alt=p.demo?`Demo placeholder for ${p.title}`:p.description;img.loading='lazy';
+    const img=document.createElement('img');img.src=p.src;img.alt=p.description;img.loading='lazy';
     frame.append(img);
-    if (p.demo){const demo=document.createElement('span');demo.className='photo-demo';demo.textContent='DEMO · REPLACE';frame.append(demo);}
     const expand=document.createElement('span');expand.className='photo-expand';expand.textContent='↗';expand.setAttribute('aria-hidden','true');frame.append(expand);
     const info=document.createElement('div');info.className='photo-info';const meta=document.createElement('span');meta.textContent=`${String(p.id).padStart(2,'0')} / ${p.illustration ? 'CONCEPT ART' : (p.author === 'a' ? 'LUKA' : 'MARK')} / ${p.category}`;
     const title=document.createElement('h3');title.textContent=p.title;const desc=document.createElement('p');desc.textContent=p.description;info.append(meta,title,desc);
@@ -145,8 +144,8 @@ function renderGallery(){
   });
 }
 function showLightbox(){const p=visiblePhotos[lightboxIndex];if (!p) return;
-  $('#lightboxImg').src=p.src;$('#lightboxImg').alt=p.demo?`Sample illustration: ${p.title}`:p.description;
-  $('#lightboxTag').textContent=`IMAGE ${String(p.id).padStart(2,'0')} / ${p.author === 'a' ? 'Student Luka' : 'Student Mark'} ${p.demo?'/ DEMO PLACEHOLDER':p.illustration?'/ CONCEPT ILLUSTRATION':''}`;
+  $('#lightboxImg').src=p.src;$('#lightboxImg').alt=p.description;
+  $('#lightboxTag').textContent=`IMAGE ${String(p.id).padStart(2,'0')} / ${p.author === 'a' ? 'Student Luka' : 'Student Mark'} ${p.illustration?'/ CONCEPT ILLUSTRATION':''}`;
   $('#lightboxTitle').textContent=p.title;$('#lightboxDescription').textContent=p.description;
 }
 function openLightbox(index,trigger){beforeModal=trigger;lightboxIndex=index;showLightbox();$('#lightbox').hidden=false;document.body.classList.add('lightbox-open');$('#lightboxClose').focus();}
