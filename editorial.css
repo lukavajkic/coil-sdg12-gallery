@@ -394,3 +394,18 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
   object-fit:contain;
   object-position:center;
 }
+
+/* Featured authentic street-bin photo: portrait orientation is preserved. */
+@media(min-width:581px){
+  .gallery-grid .photo:first-child{grid-row:span 2}
+}
+.gallery-grid .photo:first-child .photo-img{
+  aspect-ratio:3 / 4!important;
+}
+.gallery-grid .photo:first-child .photo-img img{
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:580px){
+  .gallery-grid .photo:first-child{grid-row:auto}
+}
