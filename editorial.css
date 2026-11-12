@@ -385,3 +385,27 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
   .local-card-text .local-card-body{padding:20px}
   .local-card-number{margin-bottom:14px}
 }
+
+/* Portrait photograph of the real e-waste and battery bin in Nova Gorica. */
+.gallery-grid .photo:first-child .photo-img{
+  background:#152d2c;
+}
+.gallery-grid .photo:first-child .photo-img img{
+  object-fit:contain;
+  object-position:center;
+}
+
+/* Featured authentic street-bin photo: portrait orientation is preserved. */
+@media(min-width:581px){
+  .gallery-grid .photo:first-child{grid-row:span 2}
+}
+.gallery-grid .photo:first-child .photo-img{
+  aspect-ratio:3 / 4!important;
+}
+.gallery-grid .photo:first-child .photo-img img{
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:580px){
+  .gallery-grid .photo:first-child{grid-row:auto}
+}
