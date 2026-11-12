@@ -105,8 +105,8 @@ renderDataset();
 // Local story highlights reuse gallery images rather than introducing extra photo obligations.
 const featured = [
   {photoId:1,number:'01 / THE STREET',tag:'STREET-LEVEL EVIDENCE',title:'What does this bin accept?',body:'Photograph a real local collection point. Compare the label with the rules — small batteries and electrical devices do not always use the same compartment.'},
-  {photoId:4,number:'02 / COLLECTION CENTRE',tag:'LOCAL INFRASTRUCTURE',title:'Where larger devices belong.',body:'Collection centres handle categories that do not fit street containers. Confirm current opening hours and photo permission before visiting.'},
-  {photoId:7,number:'03 / REUSE',tag:'BEFORE RECYCLING',title:'Could someone else use it?',body:'Working equipment has a possible second life. Our local reuse corner is a concrete example of prevention before recycling.'}
+  {photoId:3,number:'02 / COLLECTION CENTRE',tag:'LOCAL INFRASTRUCTURE',title:'Where larger devices belong.',body:'Collection centres handle categories that do not fit street containers. Confirm current opening hours and photo permission before visiting.'},
+  {photoId:4,number:'03 / REUSE',tag:'BEFORE RECYCLING',title:'Could someone else use it?',body:'Working equipment has a possible second life. Our local reuse corner is a concrete example of prevention before recycling.'}
 ];
 function renderLocalCards(){
   const root=$('#localCards');root.textContent='';
@@ -125,11 +125,11 @@ function renderLocalCards(){
 }
 renderLocalCards();
 
-// 12 real student images: filtering, keyboard accessible lightbox.
+// Six planned student photos: filtering, keyboard accessible lightbox.
 let category='all', author='all', visiblePhotos=[], lightboxIndex=0, beforeModal=null;
 function renderGallery(){
   visiblePhotos=galleryPhotos.filter(p=>(category==='all'||p.category===category)&&(author==='all'||p.author===author));
-  $('#galleryCount').textContent=`Showing ${visiblePhotos.length} of 12 planned photographs`;
+  $('#galleryCount').textContent=`Showing ${visiblePhotos.length} of ${galleryPhotos.length} planned photographs`;
   const root=$('#galleryGrid');root.textContent='';
   visiblePhotos.forEach((p,index)=>{
     const card=document.createElement('article');card.className='photo';
