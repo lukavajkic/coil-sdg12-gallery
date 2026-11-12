@@ -318,3 +318,306 @@ a,button{transition:background-color .2s,color .2s,border-color .2s}
 @media(min-width:581px) and (max-width:820px){
  .nav{top:68px;max-height:calc(100dvh - 68px)}
 }
+
+
+/* ==========================================================
+   RESPONSIVE LAYOUT / COLLISION FIXES — November 2026
+   Keep all copy, artwork and interactions intact.
+   Never allow decorative stamps, stretched image cards or
+   fixed-width grid children to cover neighbouring content.
+   ========================================================== */
+
+/* Nested grid and flex children must be able to shrink. */
+.hero-grid > *, .intro-grid > *, .section-top > *, .timeline-detail > *,
+.data-content > *, .data-dashboard > *, .local-banner > *,
+.local-cards > *, .local-card, .gallery-grid > *, .gallery-grid .photo-button,
+.lab-panel > *, .creator-grid > *, .creator-card, .station-bins > *,
+.station-bin, .section .wrap, .stat-grid > * { min-width: 0; }
+
+.hero-main, .hero-copy, .hero-sub, .intro-body, .timeline-detail,
+.data-explainer, .local-card-body, .local-info, .photo-info,
+.creator-card, .lab-left, .lab-right, .station-feedback {
+  overflow-wrap: break-word;
+}
+.headline, .hero h1, .timeline-detail h3, .local-banner h3 {
+  max-width: 100%;
+  overflow-wrap: anywhere; /* last resort for narrow devices */
+}
+.section-top > p, .intro-body p, .local-banner p, .local-card-body p,
+.photo-info p, .lab-right p, .creator-card p, .station-source-note {
+  max-width: 100%;
+}
+
+/* The cover is now a separate illustration panel, not text overlaid
+   on top of a photograph. Decorative type stays OUTSIDE the image. */
+.hero-grid{
+  grid-template-columns: minmax(0,1.05fr) minmax(0,.95fr);
+  gap: clamp(42px,5vw,92px);
+  align-items: center;
+}
+.hero-main{min-width:0;position:relative;z-index:2}
+.hero h1{
+  font-size:clamp(47px,5.35vw,82px);
+  letter-spacing:-.06em;
+  line-height:1.01;
+  margin-right:0;
+}
+.hero-art{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:5px;
+  min-width:0;
+  min-height:480px;
+  padding:24px 20px 16px;
+  overflow:hidden;
+  transform:none;
+  margin:0;
+}
+.hero-art>img{
+  position:relative;
+  z-index:2;
+  display:block;
+  width:min(100%,440px);
+  max-height:420px;
+  height:auto;
+  object-fit:contain;
+  animation:none;
+  flex:0 1 auto;
+}
+.hero-art .art-ring{pointer-events:none}
+.hero-art .art-sticker{display:none}
+.hero-art .art-year{
+  position:relative;
+  inset:auto;
+  z-index:3;
+  transform:none;
+  align-self:flex-end;
+  margin-top:0;
+  padding:8px 12px;
+  font-size:26px;
+  line-height:1;
+  box-shadow:4px 4px 0 rgba(255,255,255,.65);
+  flex-shrink:0;
+}
+.hero-art .art-year span{font-size:8px;line-height:1.25}
+.hero-art:after{display:none}
+.hero-art:before{display:none}
+.hero-labels{flex-wrap:wrap;row-gap:15px}
+.hero-labels>span{min-width:0}
+
+/* Smaller headlines cannot push an image out of its own grid cell. */
+.headline{font-size:clamp(38px,5.05vw,73px);letter-spacing:-.055em}
+.headline i{letter-spacing:-.045em}
+.section-top{align-items:start}
+.section-top>h2{flex:1 1 55%;min-width:0}
+.section-top>p{flex:1 1 32%;min-width:0;margin:0}
+
+/* Ensure figures, dates, stat units and chart labels stay in their boxes. */
+.stat-grid strong{white-space:normal;overflow-wrap:anywhere;letter-spacing:-.035em}
+.stat-grid strong small{display:inline;font-size:.35em}
+.timeline-shell{min-width:0}
+.timeline-years{min-width:0}
+.timeline-detail{min-width:0}
+.timeline-detail > *{min-width:0}
+.detail-year{font-size:clamp(58px,7vw,100px);letter-spacing:-.065em}
+.data-content{min-width:0}
+.data-number{font-size:clamp(48px,6vw,82px);overflow-wrap:anywhere}
+.data-plot{min-width:0;overflow:hidden}
+.chart-column{min-width:0}
+.chart-column .bar-num,.chart-column .bar-year{white-space:nowrap;text-overflow:clip}
+
+/* Real photos stay inside their assigned image frames. No automatic
+   multi-row stretching (which could put text on top of neighbouring cards). */
+.local-visual{overflow:hidden}
+.local-visual img{width:100%;height:100%;object-fit:cover;display:block}
+.local-banner-graphic{overflow:hidden;min-width:0}
+.local-banner-graphic b{line-height:1;max-width:100%}
+.local-cards{align-items:stretch}
+.local-card{min-width:0}
+.local-card-body{overflow-wrap:anywhere}
+.gallery-grid{grid-auto-flow:row;align-items:start}
+.gallery-grid .photo{display:block;min-width:0;height:auto}
+.gallery-grid .photo-button{
+  display:block;
+  width:100%;
+  height:auto;
+  overflow:hidden;
+  padding:0;
+  min-width:0;
+}
+.gallery-grid .photo:nth-child(7n + 1){
+  grid-row:auto;
+  grid-column:span 2;
+}
+.gallery-grid .photo:nth-child(7n + 1) .photo-img{
+  aspect-ratio:1.8;
+  flex:none;
+  min-height:0;
+}
+.gallery-grid .photo-img{overflow:hidden;position:relative}
+.gallery-grid .photo-img img{width:100%;height:100%;display:block;object-fit:cover}
+.gallery-grid .photo-info{min-width:0;height:auto;position:static}
+.gallery-grid .photo-info h3,
+.gallery-grid .photo-info p{overflow-wrap:anywhere;max-width:100%}
+.gallery-grid .photo-info h3{line-height:1.24}
+.gallery-grid .photo-info p{line-height:1.6}
+
+/* Long headings and controls must wrap instead of sitting on top of icons. */
+.lab-panel,.lab-left,.lab-right{min-width:0}
+.lab-left h3,.lab-right h4{overflow-wrap:anywhere;max-width:100%}
+.answer{min-width:0}
+.answer>div{min-width:0;overflow-wrap:anywhere}
+.creator-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.creator-card,.creator-card h3{min-width:0;overflow-wrap:anywhere}
+.video-slot{min-width:0;max-width:100%;overflow:hidden}
+.video-slot strong,.video-slot span,.video-slot code{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+  text-align:center;
+}
+.video-slot video{max-width:100%;max-height:100%;height:100%;object-fit:contain}
+
+/* Bins display full names and hints; their labels may take multiple lines.
+   Never force text into a fixed-height area. */
+.station-bins{align-items:stretch}
+.station-bin{height:auto;min-width:0;justify-content:end;padding:11px 5px 10px}
+.station-bin-label{
+  min-height:0;
+  height:auto;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+  white-space:normal;
+}
+.station-bin strong{
+  min-height:0;
+  height:auto;
+  margin-top:9px;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+  white-space:normal;
+  text-align:center;
+}
+.station-bin-lid,.station-bin-body{flex-shrink:0}
+.station-item{max-width:100%;min-width:0}
+.station-item strong{overflow-wrap:anywhere}
+.station-bottom{align-items:flex-start}
+.station-feedback{min-width:0}
+.station-feedback p{overflow-wrap:anywhere}
+.station-foot{flex-wrap:wrap}
+
+/* 1240px: do not squeeze cover copy against the illustration. */
+@media(max-width:1240px){
+  .menu-btn{display:flex}
+  .nav{
+    display:none;
+    position:absolute;
+    top:82px;
+    left:0;right:0;
+    z-index:70;
+    background:#faf8ef;
+    border-bottom:2px solid #172c42;
+    box-shadow:0 17px 28px rgba(20,44,55,.18);
+    padding:18px max(24px,5vw);
+    flex-direction:column;
+    align-items:stretch;
+    gap:0;
+    max-height:calc(100dvh - 82px);
+    overflow-y:auto;
+  }
+  .nav.open{display:flex}
+  .nav>a:not(.nav-pill){padding:12px 10px;font-size:13px}
+  .nav-pill{margin-top:8px;text-align:center}
+}
+@media(max-width:1180px){
+  .hero-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:39px;
+    min-height:0;
+    padding:72px 0 54px;
+  }
+  .hero h1{max-width:850px;font-size:clamp(52px,7.7vw,88px)}
+  .hero-art{width:min(100% - 20px,630px);min-height:0;justify-self:center;margin:0 auto}
+  .hero-art>img{max-height:430px}
+  .intro-grid{grid-template-columns:1fr 1fr;gap:38px}
+}
+@media(max-width:900px){
+  .section-top{display:block}
+  .section-top>p{margin-top:20px}
+  .intro-grid{grid-template-columns:1fr;gap:24px}
+  .timeline-detail{grid-template-columns:1fr;gap:14px}
+  .data-content{grid-template-columns:1fr}
+  .data-explainer{border-right:0;border-bottom:2px solid var(--ink)}
+  .local-banner{grid-template-columns:1fr}
+  .local-banner-graphic{display:none}
+  .lab-panel{grid-template-columns:minmax(0,1fr)}
+  .lab-nav{grid-template-columns:1fr}
+}
+@media(max-width:820px){
+  .nav{top:68px;max-height:calc(100dvh - 68px)}
+  .timeline-years{overflow-x:auto}
+  .hero-art{width:min(100% - 16px,550px)}
+  .hero h1{font-size:clamp(48px,8.3vw,76px)}
+  .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .gallery-grid .photo:nth-child(7n + 1){grid-column:span 2;grid-row:auto}
+}
+@media(max-width:580px){
+  .nav{top:70px;max-height:calc(100dvh - 70px)}
+  .hero:before{padding:12px 17px 0}
+  .hero-grid{padding:32px 0 41px;gap:30px}
+  .hero h1{font-size:clamp(36px,10vw,57px);letter-spacing:-.065em}
+  .hero-sub{font-size:14px;line-height:1.7}
+  .hero-art{
+    width:calc(100% - 20px);
+    padding:16px 11px 13px;
+    min-height:0;
+    gap:8px;
+    box-shadow:7px 7px 0 #b4edce;
+  }
+  .hero-art>img{
+    width:100%;
+    height:auto;
+    max-height:300px;
+  }
+  .hero-art .art-year{font-size:22px;padding:7px 9px}
+  .hero-labels{gap:12px;font-size:22px}
+  .hero-labels>span{padding:0 9px 0 0}
+  .hero-labels>span+span{padding-left:12px}
+  .headline{font-size:clamp(34px,9vw,54px);letter-spacing:-.06em}
+  .gallery-grid{
+    grid-template-columns:minmax(0,1fr);
+    gap:17px;
+  }
+  .gallery-grid .photo:nth-child(7n + 1){grid-column:auto}
+  .gallery-grid .photo .photo-img,
+  .gallery-grid .photo:nth-child(7n + 1) .photo-img{
+    aspect-ratio:1.65;
+    min-height:0;
+  }
+  .gallery-grid .photo-info h3,
+  .gallery-grid .photo:nth-child(7n + 1) .photo-info h3{
+    font-size:20px;
+  }
+  .gallery-grid .photo-info{padding:15px}
+  .station-bins{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .station-bin{min-height:174px}
+  .station-bin-label{font-size:10px;min-height:0}
+  .station-bin strong{font-size:11px;min-height:0}
+  .station-bin-body{width:65%;height:68px}
+  .station-bin-lid{width:72%}
+  .creator-grid{grid-template-columns:minmax(0,1fr)}
+  .creator-card{min-width:0}
+  .lab-panel,.lab-left,.lab-right{min-width:0}
+}
+@media(max-width:360px){
+  .hero h1{font-size:clamp(32px,9.5vw,40px)}
+  .hero-actions{flex-direction:column;align-items:flex-start}
+  .hero-labels{font-size:18px}
+  .hero-art>img{max-height:245px}
+  .station-bins{gap:7px}
+  .station-bin{min-height:160px}
+  .station-bin-label{font-size:9px}
+  .station-bin strong{font-size:10px}
+}
