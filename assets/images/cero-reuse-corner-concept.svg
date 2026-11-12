@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 780" role="img" aria-labelledby="title desc">
+<title id="title">Illustration of CERO collection centre and an electronics reuse corner</title>
+<desc id="desc">Original illustrative scene inspired by the idea of a collection centre in Stara Gora near Nova Gorica, showing e-waste containers and a small reuse corner with second-hand electronics. This does not depict the actual building or facility.</desc>
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#83ccef"/><stop offset="1" stop-color="#e6f4ec"/></linearGradient>
+ <linearGradient id="grass" x2="0" y2="1"><stop stop-color="#75b66a"/><stop offset="1" stop-color="#3d8b62"/></linearGradient>
+ <linearGradient id="wall" x2="0" y2="1"><stop stop-color="#f2ecdf"/><stop offset="1" stop-color="#d8dcd5"/></linearGradient>
+ <linearGradient id="wood" x2="1" y2="1"><stop stop-color="#ebc68d"/><stop offset="1" stop-color="#c08f57"/></linearGradient>
+ <linearGradient id="roof" x2="1" y2="1"><stop stop-color="#275365"/><stop offset="1" stop-color="#172e3b"/></linearGradient>
+ <linearGradient id="road" x2="0" y2="1"><stop stop-color="#c5d3d0"/><stop offset="1" stop-color="#829a9a"/></linearGradient>
+ <filter id="shadow" x="-25%" y="-30%" width="150%" height="165%"><feDropShadow dx="0" dy="9" stdDeviation="10" flood-color="#25414b" flood-opacity=".22"/></filter>
+ <pattern id="grain" width="22" height="22" patternUnits="userSpaceOnUse"><path d="M22 0H0V22" fill="none" stroke="#fff" stroke-opacity=".075"/></pattern>
+</defs>
+<!-- Sky and landscape -->
+<rect width="1200" height="780" fill="url(#sky)"/>
+<g fill="#fff" opacity=".78"><ellipse cx="198" cy="104" rx="80" ry="19"/><circle cx="168" cy="96" r="27"/><circle cx="218" cy="88" r="33"/><ellipse cx="832" cy="106" rx="91" ry="20"/><circle cx="801" cy="91" r="32"/><circle cx="864" cy="88" r="35"/></g>
+<path d="M0 362 Q165 318 295 362 T607 359 T905 347 T1200 353 V780H0Z" fill="#a4d6af"/>
+<path d="M0 441 Q155 390 315 430 T630 415 T945 420 T1200 397 V780H0Z" fill="url(#grass)"/>
+<g fill="#407f61"><ellipse cx="51" cy="405" rx="46" ry="80"/><ellipse cx="112" cy="430" rx="37" ry="72"/><ellipse cx="1122" cy="394" rx="54" ry="92"/><ellipse cx="1178" cy="405" rx="52" ry="96"/></g>
+<g fill="#4c9065" opacity=".9"><circle cx="45" cy="377" r="45"/><circle cx="100" cy="398" r="45"/><circle cx="1116" cy="353" r="52"/><circle cx="1180" cy="362" r="51"/></g>
+<path d="M0 584 Q421 532 669 565 T1200 551 V780H0Z" fill="url(#road)"/>
+<path d="M0 664 Q494 618 1200 635" fill="none" stroke="#eaf0e6" stroke-width="5" stroke-dasharray="53 30" opacity=".8"/>
+<path d="M0 573 Q384 516 1200 543" fill="none" stroke="#628877" stroke-width="8" opacity=".38"/>
+<!-- Collection centre building -->
+<g filter="url(#shadow)">
+ <path d="M125 224L631 173 748 230 746 580 122 584Z" fill="url(#wall)" stroke="#496d70" stroke-width="4"/>
+ <path d="M125 225L631 173 749 230 598 242Z" fill="#2d7770"/>
+ <path d="M131 225L633 176 746 229" fill="none" stroke="#164b56" stroke-width="13" stroke-linejoin="round"/>
+ <path d="M420 280H723V574H420Z" fill="#25434b"/>
+ <path d="M429 295H714V569H429Z" fill="#66877c"/>
+ <path d="M435 304H706V562H435Z" fill="#b6cbb9" opacity=".38"/>
+ <path d="M435 363H704" stroke="#d9e7d9" stroke-width="12" opacity=".62"/>
+ <path d="M435 431H704" stroke="#d9e7d9" stroke-width="10" opacity=".4"/>
+ <path d="M430 309L714 287V324L430 347Z" fill="#1d4146"/>
+ <path d="M121 584H754" stroke="#1e4851" stroke-width="10"/>
+</g>
+<g font-family="DejaVu Sans,Arial,sans-serif">
+ <text x="175" y="329" font-size="55" font-weight="900" fill="#173f49">CERO</text>
+ <text x="176" y="366" font-size="25" font-weight="800" fill="#236b60">STARA GORA</text>
+ <text x="176" y="397" font-size="19" font-weight="700" fill="#557a7b">ZBIRNI CENTER</text>
+</g>
+<!-- Recycling emblem on wall -->
+<g transform="translate(181 447)" fill="none" stroke="#409b64" stroke-width="11" stroke-linejoin="round" stroke-linecap="round">
+ <path d="M42 -17A55 55 0 0 1 97 34M97 34l-22-4m22 4l-5-23"/>
+ <path d="M96 50A56 56 0 0 1 17 79M17 79l12-20m-12 20l24 2"/>
+ <path d="M4 66A54 54 0 0 1 40 -17M40 -17l1 22M40 -17l-20 12"/>
+</g>
+<!-- Bins in the collection bay -->
+<g filter="url(#shadow)">
+ <g transform="translate(461 429)"><rect x="0" y="24" width="82" height="113" rx="5" fill="#267e67" stroke="#1b544f" stroke-width="4"/><rect x="-6" y="11" width="93" height="19" rx="4" fill="#19584f"/><rect x="21" y="59" width="39" height="31" rx="4" fill="#d5ebcf"/><path d="M27 77l10-11 10 11-10 9-10-9z" fill="none" stroke="#2b8a69" stroke-width="4"/></g>
+ <g transform="translate(565 443)"><rect x="0" y="19" width="71" height="99" rx="6" fill="#408a9c" stroke="#205766" stroke-width="4"/><rect x="-4" y="5" width="79" height="22" rx="4" fill="#285768"/><rect x="18" y="53" width="35" height="25" rx="4" fill="#d4ecf1"/><path d="M29 55v17m9-17v17" stroke="#37728c" stroke-width="4"/></g>
+ <g transform="translate(649 466)"><rect width="48" height="97" rx="4" fill="#526f6d" stroke="#284c54" stroke-width="3"/><rect x="-4" y="-10" width="56" height="17" rx="4" fill="#30515b"/></g>
+</g>
+<!-- Reuse corner stall and extended awning -->
+<g filter="url(#shadow)">
+ <path d="M750 290L1185 246 1193 592 747 603Z" fill="url(#wood)" stroke="#755a40" stroke-width="4"/>
+ <path d="M739 270L1156 192 1237 239 773 327Z" fill="url(#roof)" stroke="#193e4b" stroke-width="8"/>
+ <path d="M778 323L1196 265" stroke="#193e4b" stroke-width="18"/>
+ <path d="M776 306V612M1182 259V612" stroke="#21404a" stroke-width="16"/>
+ <path d="M799 331L1164 276V372L799 422Z" fill="#237a60" stroke="#125749" stroke-width="3"/>
+ <text x="818" y="360" font-family="DejaVu Sans,Arial,sans-serif" font-size="24" font-weight="800" fill="#fff" transform="rotate(-6 818 360)">KOTIČEK ZA</text>
+ <text x="819" y="392" font-family="DejaVu Sans,Arial,sans-serif" font-size="23" font-weight="800" fill="#fff" transform="rotate(-6 819 392)">PONOVNO UPORABO</text>
+ <path d="M830 466L1152 423V445L829 487Z" fill="#7b533d"/>
+ <path d="M830 548L1152 508V533L829 574Z" fill="#7b533d"/>
+</g>
+<!-- Refurbished electronics -->
+<g filter="url(#shadow)">
+ <g transform="translate(864 445)"><rect width="100" height="73" rx="8" fill="#223d4d" stroke="#182d3b" stroke-width="6"/><rect x="10" y="10" width="79" height="47" rx="2" fill="#82c4d6"/><path d="M22 45L42 25 55 40 74 19" fill="none" stroke="#fff" stroke-width="5" opacity=".9"/><rect x="44" y="71" width="12" height="16" fill="#274653"/><rect x="21" y="86" width="59" height="6" rx="3" fill="#274653"/></g>
+ <g transform="translate(994 436)"><rect width="120" height="15" rx="4" fill="#cddcde" stroke="#253942" stroke-width="4"/><path d="M18-48H102L111 1H9Z" fill="#2b4954" stroke="#1d343c" stroke-width="5"/><path d="M24-42H97L104-7H17Z" fill="#b1d7e0"/><rect x="35" y="4" width="51" height="4" fill="#536c71"/></g>
+ <g transform="translate(857 537)"><rect width="73" height="52" rx="7" fill="#3b5961" stroke="#1b353d" stroke-width="4"/><circle cx="37" cy="25" r="17" fill="#233943" stroke="#94c4bc" stroke-width="5"/></g>
+ <g transform="translate(972 528)"><rect width="105" height="61" rx="6" fill="#d7ded8" stroke="#536c6c" stroke-width="4"/><rect x="9" y="8" width="68" height="45" rx="3" fill="#365560"/><rect x="83" y="14" width="13" height="13" rx="6" fill="#748a89"/><rect x="83" y="34" width="13" height="13" rx="6" fill="#748a89"/></g>
+</g>
+<!-- Reuse arrow, plant, pavement and info panel -->
+<g transform="translate(1103 344)" fill="none" stroke="#dcf8dd" stroke-width="7" stroke-linecap="round"><path d="M-3-15a23 23 0 1 1-10 44"/><path d="M-17 8l4 21 20-6"/></g>
+<g transform="translate(1137 528)"><path d="M-15 2L-4 73H38L49 2Z" fill="#597b6f"/><path d="M17 2Q-9-38 10-65M17 2Q31-43 43-49M17-14Q-13-24-24-40" fill="none" stroke="#347a55" stroke-width="6"/><g fill="#45985f"><ellipse cx="-9" cy="-40" rx="18" ry="10" transform="rotate(25 -9 -40)"/><ellipse cx="42" cy="-49" rx="19" ry="10" transform="rotate(-33 42 -49)"/><ellipse cx="-17" cy="-19" rx="16" ry="9" transform="rotate(13 -17 -19)"/><ellipse cx="35" cy="-16" rx="17" ry="10" transform="rotate(-25 35 -16)"/><ellipse cx="6" cy="-67" rx="12" ry="21" transform="rotate(-25 6 -67)"/></g></g>
+<!-- Foreground informational sign -->
+<g filter="url(#shadow)" transform="translate(58 478)">
+ <path d="M43 148V240" stroke="#2d4e53" stroke-width="15"/>
+ <rect width="322" height="150" rx="13" fill="#205b4b" stroke="#d9eee3" stroke-width="7"/>
+ <text x="26" y="51" font-family="DejaVu Sans,Arial,sans-serif" font-size="25" font-weight="900" fill="#fff">ZBIRNI CENTER</text>
+ <text x="27" y="88" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700" fill="#bde5d7">REUSE + RECYCLING</text>
+ <path d="M232 105H284m-19-19l19 19-19 19" fill="none" stroke="#eaf8e8" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+<g opacity=".25"><path d="M550 694Q643 685 734 687M602 720Q717 710 802 715" fill="none" stroke="#425f5f" stroke-width="6" stroke-linecap="round"/></g>
+<rect x="0" y="755" width="1200" height="25" fill="#1a4e56"/>
+<text x="1180" y="772" text-anchor="end" font-family="DejaVu Sans,Arial,sans-serif" font-size="13" letter-spacing=".5" font-weight="800" fill="#e3f3ea">CONCEPT ILLUSTRATION — NOT A PHOTO</text>
+</svg>

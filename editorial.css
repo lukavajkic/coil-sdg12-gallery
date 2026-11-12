@@ -410,18 +410,3 @@ h1,h2,h3,h4,p{overflow-wrap:break-word}
 @media(max-width:580px){
   .gallery-grid .photo .photo-img{aspect-ratio:1.65!important}
 }
-
-/* Visible credit for the externally sourced, public-domain photo in slot 3. */
-.gallery-grid .photo-credit{
-  display:block;
-  margin:0;
-  padding:10px 15px 13px;
-  border-top:1px solid #d5e5de;
-  background:#f2f7f2;
-  color:#245e70;
-  font:700 11px/1.5 'DM Sans',Arial,sans-serif;
-  text-decoration:underline;
-  text-underline-offset:3px;
-  overflow-wrap:anywhere;
-}
-.gallery-grid .photo-credit:hover{color:#234bd0}
